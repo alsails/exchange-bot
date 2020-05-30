@@ -12,12 +12,9 @@ from typing import Optional
 bot = telebot.TeleBot('1155205363:AAEOyWIl4cXAUqM2gxspsG2cJ6uGkMh0zJE')
 
 Rate = namedtuple('Rate', 'name,rate')
-# URL запроса
 get_curl = "http://www.cbr.ru/scripts/XML_daily.asp"
-# Формат даты: день/месяц/год
 date_format = "%d/%m/%Y"
 date_f = "%d.%m.%Y"
-# Дата запроса
 today = datetime.datetime.today()
 params = {"date_req": today.strftime(date_format),}
 r = requests.get(get_curl, params=params)
